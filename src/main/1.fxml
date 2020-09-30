@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1000.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openFileExplorer" text="Open Image" />
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Info">
+                    <items>
+                        <MenuItem fx:id="name" mnemonicParsing="false" text="name" />
+                        <MenuItem fx:id="size" mnemonicParsing="false" text="size" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Image">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#redChannel" text="red" />
+                        <MenuItem mnemonicParsing="false" onAction="#purpleChannel" text="purple" />
+                        <MenuItem mnemonicParsing="false" onAction="#whiteChannel" text="white" />
+                        <MenuItem mnemonicParsing="false" onAction="#originImage" text="Original" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ImageView fx:id="image" fitHeight="400.0" fitWidth="400.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="red" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="purple" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="white" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" />
+        <Button layoutX="334.0" layoutY="482.0" mnemonicParsing="false" onAction="#greyScale" prefHeight="65.0" prefWidth="56.0" text="Grey Scale" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+        <Button layoutX="334.0" layoutY="565.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="56.0" text="Reset" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+        <ImageView fx:id="image2" fitHeight="400.0" fitWidth="400.0" layoutX="600.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+        <AnchorPane fx:id="anchor2" layoutX="600.0" layoutY="27.0" prefHeight="400.0" prefWidth="400.0" />
+        <AnchorPane fx:id="anchor" layoutX="600.0" layoutY="27.0" prefHeight="400.0" prefWidth="400.0" />
+        <Button layoutX="851.0" layoutY="537.0" mnemonicParsing="false" onAction="#process" prefHeight="25.0" prefWidth="56.0" text="Process" />
+        <Slider fx:id="reduction" layoutX="765.0" layoutY="496.0" majorTickUnit="10.0" max="1000.0" minorTickCount="10" prefHeight="38.0" prefWidth="226.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+        <Label layoutX="834.0" layoutY="478.0" text="Noise Reduction" />
+        <Label layoutX="609.0" layoutY="489.0" text="Red Blood Cells" />
+        <Label layoutX="609.0" layoutY="549.0" text="White Blood Cells" />
+        <Label layoutX="609.0" layoutY="519.0" text="Red clusters" />
+        <Label layoutX="610.0" layoutY="579.0" text="Total Blood Cells" />
+        <Label fx:id="countRed" layoutX="715.0" layoutY="489.0" text=": " />
+        <Label fx:id="countCluster" layoutX="715.0" layoutY="519.0" text=": " />
+        <Label fx:id="countWhite" layoutX="715.0" layoutY="549.0" text=": " />
+        <Label fx:id="countTotal" layoutX="715.0" layoutY="579.0" text=": " />
+        <Slider fx:id="lowEnd" blockIncrement="1.0" layoutX="27.0" layoutY="486.0" majorTickUnit="2.0" max="200.0" min="60.0" minorTickCount="1" onMouseDragged="#colorCorrection" prefHeight="14.0" prefWidth="291.0" showTickMarks="true" />
+        <Slider fx:id="highEnd" blockIncrement="1.0" layoutX="27.0" layoutY="546.0" majorTickUnit="1.0" max="245.0" min="200.0" minorTickCount="1" onMouseDragged="#colorCorrection" prefHeight="14.0" prefWidth="291.0" showTickMarks="true" />
+        <RadioButton fx:id="dark" layoutX="126.0" layoutY="582.0" mnemonicParsing="false" onAction="#darker" text="Darker Image" />
+        <RadioButton fx:id="originalImage" layoutX="608.0" layoutY="440.0" mnemonicParsing="false" onAction="#setOriginal" text="Original Image" />
+        <Button layoutX="847.0" layoutY="575.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+        <Label layoutX="122.0" layoutY="469.0" text="Purple Color Range" />
+        <Label layoutX="128.0" layoutY="528.0" text="Red Color Range" />
+        <RadioButton fx:id="visible1" layoutX="722.0" layoutY="440.0" mnemonicParsing="false" onAction="#visible2" text="Hide Numbering" />
+      <Button layoutX="852.0" layoutY="436.0" mnemonicParsing="false" onAction="#reload" prefHeight="25.0" prefWidth="56.0" text="Reload" />
+    </children>
+</AnchorPane>
