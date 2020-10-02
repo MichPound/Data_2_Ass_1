@@ -7,6 +7,8 @@ simple image that only contains red, purple and white pixels. Depending on what 
 might not have correctly identified the different cells for this image, I have included two sliders which control the colour 
 ranges for red and purple pixels, this allows the user to manually adjust the colour ranges to better suit the image used.
 
+![alt text](http://url/to/img.png)
+
 Once this is done the image is scanned and the system will individually mark each cell or cell cluster with a rectangle, 
 the colour of the rectangle is dependent on whether it is a red/white blood cell or if it is a cluster of cells. The system
 displays information gathered in the gui and tooltip is installed on each rectangle, this gives the ability to hover
