@@ -7,7 +7,7 @@ simple image that only contains red, purple and white pixels. Depending on what 
 might not have correctly identified the different cells for this image, I have included two sliders which control the colour 
 ranges for red and purple pixels, this allows the user to manually adjust the colour ranges to better suit the image used.
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/MichPound/Datastructures_2_Assignment_1/commit/d2c22cd8ce84fe2f86ce03d46684c0e5807c5fe2)
 
 Once this is done the image is scanned and the system will individually mark each cell or cell cluster with a rectangle, 
 the colour of the rectangle is dependent on whether it is a red/white blood cell or if it is a cluster of cells. The system
